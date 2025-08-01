@@ -1,84 +1,115 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>queennnzme</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Queennnzme — Links</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
       font-family: 'Quicksand', sans-serif;
-      background: url('https://raw.githubusercontent.com/marcellnw/queennnzme/main/IMG_20250801151051408.jpg') no-repeat center center fixed;
+    }
+
+    body {
+      background: url('https://github.com/marcellnw/queennnzme/blob/main/IMG_20250801151051408.jpg?raw=true') no-repeat center center fixed;
       background-size: cover;
       display: flex;
       justify-content: center;
-      align-items: start;
+      align-items: center;
       min-height: 100vh;
+      padding: 20px;
     }
 
     .container {
-      margin-top: 40px;
-      background: rgba(255, 255, 255, 0.75);
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(10px);
       border-radius: 30px;
       padding: 30px 20px;
-      width: 90%;
       max-width: 400px;
+      width: 100%;
       text-align: center;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-      backdrop-filter: blur(5px);
+      box-shadow: 0 8px 16px rgba(255, 192, 203, 0.3);
+      animation: fadeIn 1.2s ease-in-out;
     }
 
-    .profile-pic {
+    .profile-img {
       width: 120px;
       height: 120px;
       object-fit: cover;
       border-radius: 50%;
-      border: 4px solid #fff;
-      margin-top: -80px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border: 3px solid white;
+      margin-bottom: 15px;
     }
 
     h1 {
-      font-size: 1.5rem;
-      margin: 15px 0 5px;
-      color: #333;
+      font-size: 24px;
+      font-weight: 600;
+      color: #ff69b4;
     }
 
     p.bio {
-      font-size: 0.95rem;
-      margin-bottom: 25px;
+      margin: 6px 0 20px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      background: white;
+      color: #ff69b4;
+      border-radius: 25px;
+      margin: 10px 0;
+      padding: 12px 16px;
+      font-weight: 600;
+      box-shadow: 0 4px 8px rgba(255, 105, 180, 0.2);
+      transition: transform 0.2s ease, background 0.3s ease;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.6s forwards;
+    }
+
+    .link:hover {
+      transform: scale(1.05);
+      background: #ffe6f0;
+    }
+
+    .link img {
+      width: 20px;
+      margin-right: 10px;
+    }
+
+    /* Animasi delay per tombol */
+    .link:nth-of-type(1) { animation-delay: 0.3s; }
+    .link:nth-of-type(2) { animation-delay: 0.5s; }
+    .link:nth-of-type(3) { animation-delay: 0.7s; }
+    .link:nth-of-type(4) { animation-delay: 0.9s; }
+    .link:nth-of-type(5) { animation-delay: 1.1s; }
+    .link:nth-of-type(6) { animation-delay: 1.3s; }
+
+    footer {
+      margin-top: 20px;
+      font-size: 12px;
       color: #555;
     }
 
-    .link-container a {
-      display: block;
-      background-color: #ffb6c1;
-      color: #fff;
-      text-decoration: none;
-      margin: 10px 0;
-      padding: 12px 20px;
-      border-radius: 30px;
-      font-size: 1rem;
-      transition: transform 0.3s, box-shadow 0.3s;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 0.6s ease forwards;
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-
-    .link-container a:hover {
-      transform: scale(1.05);
-      box-shadow: 0 4px 12px rgba(255, 182, 193, 0.6);
-    }
-
-    .link-container a:nth-child(1) { animation-delay: 0.2s; }
-    .link-container a:nth-child(2) { animation-delay: 0.4s; }
-    .link-container a:nth-child(3) { animation-delay: 0.6s; }
-    .link-container a:nth-child(4) { animation-delay: 0.8s; }
-    .link-container a:nth-child(5) { animation-delay: 1s; }
-    .link-container a:nth-child(6) { animation-delay: 1.2s; }
-    .link-container a:nth-child(7) { animation-delay: 1.4s; }
 
     @keyframes fadeInUp {
       to {
@@ -87,49 +118,54 @@
       }
     }
 
-    footer {
-      font-size: 0.75rem;
-      color: #888;
-      margin-top: 30px;
-    }
-
-    @media (max-width: 500px) {
+    @media (max-width: 480px) {
       .container {
-        padding: 25px 15px;
+        padding: 20px 16px;
       }
 
       h1 {
-        font-size: 1.3rem;
+        font-size: 20px;
       }
 
-      .link-container a {
-        font-size: 0.95rem;
+      .link {
+        font-size: 14px;
       }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="https://raw.githubusercontent.com/marcellnw/queennnzme/main/IMG_20250728112912459.jpg" alt="Profile" class="profile-pic" />
-    <h1>@queennnzme</h1>
-    <p class="bio">BA EternalSMP • Owner AltheraSMP</p>
+    <img class="profile-img" src="https://github.com/marcellnw/queennnzme/blob/main/IMG_20250728112912459.jpg?raw=true" alt="Profile" />
+    <h1>Queennnzme</h1>
+    <p class="bio">BA EternalSMP · Owner AltheraSMP</p>
 
-    <div class="link-container">
-      <a href="https://www.tiktok.com/@queennnzme?_t=ZS-8yVbZ6lRbKD&_r=1" target="_blank">Tiktok</a>
-      <a href="https://youtube.com/@queennnzme?si=XHrckI_ubekTkOT5" target="_blank">YouTube</a>
-      <a href="https://discord.gg/YCGvq8W3Bp" target="_blank">EternalSMP Discord</a>
-      <a href="https://discord.gg/u6cS9aZCs7" target="_blank">AltheraSMP Discord</a>
-      <a href="https://saweria.co/Queennnzme" target="_blank">Saweria</a>
-      <a href="https://ngl.link/queennnzme" target="_blank">NGL</a>
-    </div>
+    <a class="link" href="https://www.tiktok.com/@queennnzme?_t=ZS-8yVbZ6lRbKD&_r=1" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/50/000000/tiktok--v1.png"/> TikTok
+    </a>
+    <a class="link" href="https://youtube.com/@queennnzme?si=XHrckI_ubekTkOT5" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/50/000000/youtube-play.png"/> YouTube
+    </a>
+    <a class="link" href="https://discord.gg/YCGvq8W3Bp" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/50/000000/discord-logo.png"/> EternalSMP
+    </a>
+    <a class="link" href="https://discord.gg/u6cS9aZCs7" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/50/000000/discord-logo.png"/> AltheraSMP
+    </a>
+    <a class="link" href="https://saweria.co/Queennnzme" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/50/000000/money.png"/> Saweria
+    </a>
+    <a class="link" href="https://ngl.link/queennnzme" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/50/000000/paper-plane.png"/> NGL Ask Me
+    </a>
 
     <footer>
-      Copyright © queennnzme
+      &copy; 2025 Queennnzme
     </footer>
   </div>
 
+  <!-- Musik latar -->
   <audio autoplay loop hidden>
-    <source src="https://raw.githubusercontent.com/marcellnw/queennnzme/main/%5Bno_copyright_music%5D___coffee_time___cute_vlog_music(128k).mp3" type="audio/mp3">
+    <source src="https://github.com/marcellnw/queennnzme/blob/main/%5Bno_copyright_music%5D___coffee_time___cute_vlog_music(128k).mp3?raw=true" type="audio/mp3">
   </audio>
 </body>
 </html>
