@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Queennnzme | Link Bio</title>
+  <style>
+    :root {
+      --pink: #ffb6d9;
+      --white: #ffffff;
+      --black: #222;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: url('https://raw.githubusercontent.com/marcellnw/queennnzme/main/IMG_20250801151051408.jpg') no-repeat center center fixed;
+      background-size: cover;
+      backdrop-filter: blur(4px);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--black);
+      border-radius: 20px;
+      padding: 30px 20px;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid var(--pink);
+      box-shadow: 0 0 15px rgba(255, 182, 217, 0.6);
+      margin-bottom: 15px;
+      animation: glow 2.5s infinite ease-in-out;
+    }
+
+    .bio h2 {
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+    }
+
+    .bio p {
+      font-size: 1rem;
+      color: #444;
+      margin-bottom: 20px;
+    }
+
+    .link-button {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      margin: 10px 0;
+      background: var(--pink);
+      color: var(--white);
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(255,182,217,0.3);
+    }
+
+    .link-button:hover {
+      background: #ff9acb;
+      transform: scale(1.05);
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 0.8rem;
+      color: #888;
+    }
+
+    @keyframes glow {
+      0%, 100% {
+        box-shadow: 0 0 15px rgba(255, 182, 217, 0.6);
+      }
+      50% {
+        box-shadow: 0 0 25px rgba(255, 182, 217, 1);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media(max-width: 500px) {
+      .container {
+        padding: 20px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://github.com/marcellnw/marcellnw/blob/main/IMG_20250107_093043_455.webp?raw=true" alt="Profile Picture" class="profile-pic"/>
+    <div class="bio">
+      <h2>@queennnzme</h2>
+      <p>BA EternalSMP<br/>Owner AltheraSMP</p>
+    </div>
+
+    <a class="link-button" href="https://www.tiktok.com/@queennnzme?_t=ZS-8yVbZ6lRbKD&_r=1" target="_blank">TikTok</a>
+    <a class="link-button" href="https://youtube.com/@queennnzme?si=XHrckI_ubekTkOT5" target="_blank">YouTube</a>
+    <a class="link-button" href="https://discord.gg/YCGvq8W3Bp" target="_blank">EternalSMP Discord</a>
+    <a class="link-button" href="https://discord.gg/u6cS9aZCs7" target="_blank">AltheraSMP Discord</a>
+    <a class="link-button" href="https://saweria.co/Queennnzme" target="_blank">Saweria Support</a>
+    <a class="link-button" href="https://ngl.link/queennnzme" target="_blank">NGL Anonymous</a>
+
+    <div class="footer">© Queennnzme</div>
+  </div>
+</body>
+</html>
