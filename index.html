@@ -3,208 +3,172 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Queennnzme — Links</title>
+  <title>Queennnzme | Linktree</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap">
+  <script src="https://kit.fontawesome.com/a2d9b26a3b.js" crossorigin="anonymous"></script>
   <style>
     * {
+      box-sizing: border-box;
+      font-family: 'Fredoka', sans-serif;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      font-family: 'Quicksand', sans-serif;
     }
 
     body, html {
       height: 100%;
-      overflow: hidden;
-    }
-
-    /* Video Background */
-    #bg-video {
-      position: fixed;
-      top: 0;
-      left: 0;
-      min-width: 100%;
-      min-height: 100%;
-      object-fit: cover;
-      z-index: -2;
-    }
-
-    /* Overlay (soft white) */
-    .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(255, 255, 255, 0.35);
-      z-index: -1;
+      overflow-x: hidden;
     }
 
     body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
+      color: #fff;
+      background: #000;
+      position: relative;
+    }
+
+    video#bg-video {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(0.6);
     }
 
     .container {
-      background: rgba(255, 255, 255, 0.4);
-      backdrop-filter: blur(10px);
-      border-radius: 30px;
+      background: rgba(0, 0, 0, 0.6);
+      margin: 40px auto;
       padding: 30px 20px;
-      max-width: 400px;
-      width: 100%;
+      border-radius: 25px;
+      width: 90%;
+      max-width: 480px;
       text-align: center;
-      box-shadow: 0 8px 16px rgba(255, 192, 203, 0.3);
-      animation: fadeIn 1.2s ease-in-out;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+      animation: fadeIn 1.2s ease;
     }
 
-    .profile-img {
-      width: 120px;
-      height: 120px;
-      object-fit: cover;
+    .profile-pic {
+      width: 110px;
+      height: 110px;
       border-radius: 50%;
-      border: 3px solid white;
+      border: 3px solid #fff;
       margin-bottom: 15px;
-      animation: sparkle 3s ease-in-out infinite;
+      animation: sparkle 4s infinite linear;
+      object-fit: cover;
+    }
+
+    @keyframes sparkle {
+      0%, 100% { box-shadow: 0 0 5px #fff; }
+      50% { box-shadow: 0 0 15px #fff; }
     }
 
     h1 {
-      font-size: 24px;
+      font-size: 1.8em;
+      margin-bottom: 5px;
       font-weight: 600;
-      color: #ff69b4;
     }
 
     p.bio {
-      margin: 6px 0 20px;
-      font-size: 14px;
-      color: #333;
+      font-size: 1em;
+      color: #ffe3f0;
+      margin-bottom: 25px;
     }
 
-    .link {
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .link-btn {
+      background-color: #fff;
+      color: #e91e63;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 25px;
+      font-size: 1em;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
       display: flex;
       align-items: center;
       justify-content: center;
-      text-decoration: none;
-      background: white;
-      color: #ff69b4;
-      border-radius: 25px;
-      margin: 10px 0;
-      padding: 12px 16px;
-      font-weight: 600;
-      box-shadow: 0 4px 8px rgba(255, 105, 180, 0.2);
-      transition: transform 0.2s ease, background 0.3s ease;
-      animation: slideUp 0.6s ease forwards;
+      transition: 0.3s;
       opacity: 0;
+      animation: slideIn 0.5s ease forwards;
     }
 
-    .link:hover {
-      transform: scale(1.05);
-      background: #ffe6f0;
-    }
-
-    .link img {
-      width: 20px;
+    .link-btn i {
       margin-right: 10px;
     }
 
-    .link:nth-of-type(1) { animation-delay: 0.3s; }
-    .link:nth-of-type(2) { animation-delay: 0.6s; }
-    .link:nth-of-type(3) { animation-delay: 0.9s; }
-    .link:nth-of-type(4) { animation-delay: 1.2s; }
-    .link:nth-of-type(5) { animation-delay: 1.5s; }
-    .link:nth-of-type(6) { animation-delay: 1.8s; }
-
-    footer {
-      margin-top: 20px;
-      font-size: 12px;
-      color: #555;
+    .link-btn:hover {
+      background-color: #fce4ec;
+      color: #c2185b;
+      transform: scale(1.05);
     }
 
-    @keyframes fadeIn {
+    .links a:nth-child(1) { animation-delay: 0.5s; }
+    .links a:nth-child(2) { animation-delay: 0.8s; }
+    .links a:nth-child(3) { animation-delay: 0.12s; }
+    .links a:nth-child(4) { animation-delay: 0.15s; }
+    .links a:nth-child(5) { animation-delay: 1s; }
+    .links a:nth-child(6) { animation-delay: 2s; }
+
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
       from {
         opacity: 0;
         transform: translateY(20px);
       }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
 
-    @keyframes slideUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    footer {
+      margin-top: 30px;
+      font-size: 0.85em;
+      color: #ccc;
     }
 
-    @keyframes sparkle {
-      0%, 100% {
-        box-shadow: 0 0 10px #ffb6c1;
-      }
-      50% {
-        box-shadow: 0 0 20px #ffc0cb;
-      }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    @media (max-width: 480px) {
-      .container {
-        padding: 20px 16px;
-      }
-
-      h1 {
-        font-size: 20px;
-      }
-
-      .link {
-        font-size: 14px;
-      }
+    @media (max-width: 500px) {
+      .container { padding: 20px 15px; }
+      h1 { font-size: 1.5em; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Video Background -->
   <video autoplay muted loop id="bg-video">
-    <source src="https://raw.githubusercontent.com/marcellnw/queennnzme/main/Pin%20oleh%20Adore%20Silver%20di%20Commissions%20di%202025%20_%20Gambar%20gadis%20kartun%20Animasi%20Menggambar%20gadis.mp4" type="video/mp4">
+    <source src="https://github.com/marcellnw/queennnzme/raw/main/Pin%20oleh%20Adore%20Silver%20di%20Commissions%20di%202025%20_%20Gambar%20gadis%20kartun%20Animasi%20Menggambar%20gadis.mp4" type="video/mp4">
   </video>
-  <div class="overlay"></div>
 
   <div class="container">
-    <img class="profile-img" src="https://github.com/marcellnw/queennnzme/blob/main/IMG_20250728112912459.jpg?raw=true" alt="Profile" />
-    <h1>Queennnzme</h1>
-    <p class="bio">Content Creator | BA EternalSMP</p>
+    <img src="https://github.com/marcellnw/queennnzme/raw/main/IMG_20250728112912459.jpg" alt="Profile" class="profile-pic">
+    <h1>@queennnzme</h1>
+    <p class="bio">BA EternalSMP · Owner AltheraSMP</p>
+    
+    <div class="links">
+      <a href="https://www.tiktok.com/@queennnzme?_t=ZS-8yVbZ6lRbKD&_r=1" class="link-btn" target="_blank"><i class="fab fa-tiktok"></i>Tiktok</a>
+      <a href="https://youtube.com/@queennnzme?si=XHrckI_ubekTkOT5" class="link-btn" target="_blank"><i class="fab fa-youtube"></i>YouTube</a>
+      <a href="https://discord.gg/YCGvq8W3Bp" class="link-btn" target="_blank"><i class="fab fa-discord"></i>EternalSMP</a>
+      <a href="https://discord.gg/u6cS9aZCs7" class="link-btn" target="_blank"><i class="fas fa-server"></i>AltheraSMP</a>
+      <a href="https://saweria.co/Queennnzme" class="link-btn" target="_blank"><i class="fas fa-donate"></i>Saweria</a>
+      <a href="https://ngl.link/queennnzme" class="link-btn" target="_blank"><i class="fas fa-question-circle"></i>NGL</a>
+    </div>
 
-    <a class="link" href="https://www.tiktok.com/@queennnzme?_t=ZS-8yVbZ6lRbKD&_r=1" target="_blank">
-      <img src="https://img.icons8.com/ios-filled/50/000000/tiktok--v1.png"/> TikTok
-    </a>
-    <a class="link" href="https://youtube.com/@queennnzme?si=XHrckI_ubekTkOT5" target="_blank">
-      <img src="https://img.icons8.com/ios-filled/50/000000/youtube-play.png"/> YouTube
-    </a>
-    <a class="link" href="https://discord.gg/YCGvq8W3Bp" target="_blank">
-      <img src="https://img.icons8.com/ios-filled/50/000000/discord-logo.png"/> EternalSMP
-    </a>
-    <a class="link" href="https://discord.gg/u6cS9aZCs7" target="_blank">
-      <img src="https://img.icons8.com/ios-filled/50/000000/discord-logo.png"/> AltheraSMP
-    </a>
-    <a class="link" href="https://saweria.co/Queennnzme" target="_blank">
-      <img src="https://img.icons8.com/ios-filled/50/000000/money.png"/> Saweria
-    </a>
-    <a class="link" href="https://ngl.link/queennnzme" target="_blank">
-      <img src="https://img.icons8.com/ios-filled/50/000000/paper-plane.png"/> NGL Ask Me
-    </a>
-
-    <footer>
-      &copy; 2025 <strong>Queennnzme</strong> | All rights reserved.
-    </footer>
+    <footer>© 2025 Queennnzme. All rights reserved.</footer>
   </div>
 
-  <!-- Background Music -->
-  <audio autoplay loop hidden>
-    <source src="https://raw.githubusercontent.com/marcellnw/queennnzme/main/%5Bno_copyright_music%5D___coffee_time___cute_vlog_music(128k).mp3" type="audio/mp3">
+  <audio autoplay loop>
+    <source src="https://github.com/marcellnw/queennnzme/raw/main/%5Bno_copyright_music%5D___coffee_time___cute_vlog_music(128k).mp3" type="audio/mp3">
   </audio>
+
 </body>
 </html>
