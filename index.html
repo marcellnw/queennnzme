@@ -4,13 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Queennnzme</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     body {
@@ -23,14 +22,14 @@
     }
 
     .container {
-      background: rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(10px);
       border-radius: 30px;
-      padding: 24px;
+      padding: 28px;
       width: 100%;
       max-width: 420px;
       box-shadow: 0 0 20px rgba(255, 192, 203, 0.4);
       text-align: center;
-      backdrop-filter: blur(8px);
       animation: fadeIn 1s ease-in-out;
     }
 
@@ -39,7 +38,7 @@
       height: 120px;
       border-radius: 50%;
       object-fit: cover;
-      border: 4px solid #ffc0cb;
+      border: 5px solid #ffc0cb;
       margin-bottom: 12px;
       animation: popUp 1s ease forwards;
     }
@@ -47,12 +46,12 @@
     h1 {
       font-size: 22px;
       color: #d63384;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     p {
-      font-size: 13px;
-      color: #fff;
+      font-size: 14px;
+      color: #444;
       margin-bottom: 20px;
     }
 
@@ -64,14 +63,14 @@
       padding: 12px;
       margin: 10px 0;
       border-radius: 25px;
-      font-weight: 600;
+      font-weight: bold;
       opacity: 0;
       transform: translateY(20px);
       animation: slideUp 0.6s ease forwards;
     }
 
     .links a:hover {
-      background: #ff9ab9;
+      background: #ff99bb;
       transform: scale(1.04);
       transition: 0.3s;
     }
@@ -83,10 +82,21 @@
     .links a:nth-child(5) { animation-delay: 1.0s; }
     .links a:nth-child(6) { animation-delay: 1.2s; }
 
+    .links a::before {
+      content: attr(data-icon);
+      margin-right: 8px;
+    }
+
     footer {
-      margin-top: 20px;
+      margin-top: 28px;
+      padding-top: 16px;
+      border-top: 1px solid #eee;
       font-size: 12px;
-      color: #eee;
+      color: #777;
+    }
+
+    footer strong {
+      color: #d63384;
     }
 
     @keyframes fadeIn {
@@ -114,20 +124,21 @@
     <p>BA EternalSMP • Owner AltheraSMP</p>
 
     <div class="links">
-      <a href="https://www.tiktok.com/@queennnzme?_t=ZS-8yVbZ6lRbKD&_r=1" target="_blank">🎵 TikTok</a>
-      <a href="https://youtube.com/@queennnzme?si=XHrckI_ubekTkOT5" target="_blank">▶️ YouTube</a>
-      <a href="https://discord.gg/YCGvq8W3Bp" target="_blank">💬 EternalSMP Discord</a>
-      <a href="https://discord.gg/u6cS9aZCs7" target="_blank">🌸 AltheraSMP Discord</a>
-      <a href="https://saweria.co/Queennnzme" target="_blank">💖 Saweria Support</a>
-      <a href="https://ngl.link/queennnzme" target="_blank">📩 Kirim Pesan Anonim</a>
+      <a href="https://www.tiktok.com/@queennnzme?_t=ZS-8yVbZ6lRbKD&_r=1" target="_blank" data-icon="🎵">TikTok</a>
+      <a href="https://youtube.com/@queennnzme?si=XHrckI_ubekTkOT5" target="_blank" data-icon="▶️">YouTube</a>
+      <a href="https://discord.gg/YCGvq8W3Bp" target="_blank" data-icon="💬">EternalSMP Discord</a>
+      <a href="https://discord.gg/u6cS9aZCs7" target="_blank" data-icon="🌸">AltheraSMP Discord</a>
+      <a href="https://saweria.co/Queennnzme" target="_blank" data-icon="💖">Saweria Support</a>
+      <a href="https://ngl.link/queennnzme" target="_blank" data-icon="📩">Kirim Pesan Anonim</a>
     </div>
 
     <footer>
-      Copyright © Queennnzme
+      Dibuat dengan 💗 oleh <strong>@queennnzme</strong><br/>
+      &copy; 2025 Queennnzme — All rights reserved.
     </footer>
   </div>
 
-  <!-- Music -->
+  <!-- Background Music -->
   <audio autoplay loop>
     <source src="https://raw.githubusercontent.com/marcellnw/queennnzme/main/%5Bno_copyright_music%5D___coffee_time___cute_vlog_music(128k).mp3" type="audio/mp3">
   </audio>
