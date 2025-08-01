@@ -15,13 +15,37 @@
       font-family: 'Quicksand', sans-serif;
     }
 
+    body, html {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    /* Video Background */
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    /* Overlay (soft white) */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.35);
+      z-index: -1;
+    }
+
     body {
-      background: url('https://github.com/marcellnw/queennnzme/blob/main/IMG_20250801151051408.jpg?raw=true') no-repeat center center fixed;
-      background-size: cover;
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
       padding: 20px;
     }
 
@@ -86,12 +110,12 @@
       margin-right: 10px;
     }
 
-    .link:nth-child(4) { animation-delay: 0.2s; }
-    .link:nth-child(5) { animation-delay: 0.4s; }
-    .link:nth-child(6) { animation-delay: 0.6s; }
-    .link:nth-child(7) { animation-delay: 0.8s; }
-    .link:nth-child(8) { animation-delay: 1s; }
-    .link:nth-child(9) { animation-delay: 1.2s; }
+    .link:nth-of-type(1) { animation-delay: 0.3s; }
+    .link:nth-of-type(2) { animation-delay: 0.6s; }
+    .link:nth-of-type(3) { animation-delay: 0.9s; }
+    .link:nth-of-type(4) { animation-delay: 1.2s; }
+    .link:nth-of-type(5) { animation-delay: 1.5s; }
+    .link:nth-of-type(6) { animation-delay: 1.8s; }
 
     footer {
       margin-top: 20px;
@@ -142,6 +166,13 @@
   </style>
 </head>
 <body>
+
+  <!-- Video Background -->
+  <video autoplay muted loop id="bg-video">
+    <source src="https://raw.githubusercontent.com/marcellnw/queennnzme/main/Pin%20oleh%20Adore%20Silver%20di%20Commissions%20di%202025%20_%20Gambar%20gadis%20kartun%20Animasi%20Menggambar%20gadis.mp4" type="video/mp4">
+  </video>
+  <div class="overlay"></div>
+
   <div class="container">
     <img class="profile-img" src="https://github.com/marcellnw/queennnzme/blob/main/IMG_20250728112912459.jpg?raw=true" alt="Profile" />
     <h1>Queennnzme</h1>
@@ -167,7 +198,7 @@
     </a>
 
     <footer>
-      &copy; 2025 Queennnzme | All rights reserved.
+      &copy; 2025 <strong>Queennnzme</strong> | All rights reserved.
     </footer>
   </div>
 
