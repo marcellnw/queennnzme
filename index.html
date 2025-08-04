@@ -1,5 +1,4 @@
-<!DOCTYPE html><html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Queennnzme — Links</title>
@@ -82,7 +81,7 @@ p.bio {
 .grid-links {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 15px 10px;
+  gap: 15px;
   margin-bottom: 20px;
 }
 
@@ -101,6 +100,7 @@ p.bio {
   animation: slideUp 0.6s ease forwards;
   opacity: 0;
   font-size: 14px;
+  margin-bottom: 12px;
 }
 
 .link:hover {
@@ -159,15 +159,19 @@ footer {
 
   </style>
 </head>
-<body><video autoplay muted loop id="bg-video">
+<body>
+<video autoplay muted loop id="bg-video">
   <source src="https://raw.githubusercontent.com/marcellnw/queennnzme/main/Pin%20oleh%20Adore%20Silver%20di%20Commissions%20di%202025%20_%20Gambar%20gadis%20kartun%20Animasi%20Menggambar%20gadis.mp4" type="video/mp4">
 </video>
-<div class="overlay"></div><audio id="bgm" autoplay loop hidden>
+<div class="overlay"></div>
+<audio id="bgm" autoplay loop hidden>
   <source src="https://raw.githubusercontent.com/marcellnw/queennnzme/main/%5Bno_copyright_music%5D___coffee_time___cute_vlog_music(128k).mp3" type="audio/mpeg">
-</audio><div class="container">
+</audio>
+<div class="container">
   <img class="profile-img" src="https://raw.githubusercontent.com/marcellnw/queennnzme/main/Queennnzme.png" alt="Queennnzme" />
   <h1>Queennnzme</h1>
-  <p class="bio">Founder AltheraSMP | Content Creator | BA EternalSMP</p>  <div class="grid-links">
+  <p class="bio">Founder AltheraSMP | Content Creator | BA EternalSMP</p>
+  <div class="grid-links">
     <a class="link" href="https://altherasmp.vercel.app/index.html" target="_blank">
       <img src="https://img.icons8.com/ios-filled/50/000000/book.png"/> Join Server
     </a>
@@ -180,7 +184,8 @@ footer {
     <a class="link" href="https://youtube.com/@queennnzme?si=XHrckI_ubekTkOT5" target="_blank">
       <img src="https://img.icons8.com/ios-filled/50/000000/youtube-play.png"/> YouTube
     </a>
-  </div>  <a class="link" href="https://saweria.co/Queennnzme" target="_blank">
+  </div>
+  <a class="link" href="https://saweria.co/Queennnzme" target="_blank">
     <img src="https://img.icons8.com/ios-filled/50/000000/money.png"/> Saweria
   </a>
   <a class="link" href="https://discord.gg/u6cS9aZCs7" target="_blank">
@@ -194,15 +199,18 @@ footer {
   </a>
   <a class="link" href="https://ngl.link/queennnzme" target="_blank">
     <img src="https://img.icons8.com/ios-filled/50/000000/paper-plane.png"/> NGL Ask Me
-  </a>  <footer>
+  </a>
+  <footer>
     &copy; 2025 <strong>Queennnzme</strong> | All rights reserved.
   </footer>
-</div><script>
+</div>
+<script>
   window.addEventListener("click", function () {
     const bgm = document.getElementById("bgm");
     if (bgm.paused) {
       bgm.play().catch(() => {});
     }
   }, { once: true });
-</script></body>
+</script>
+</body>
 </html>
