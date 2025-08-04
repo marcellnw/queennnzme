@@ -98,6 +98,18 @@
       animation: slideUp 0.6s ease forwards;
       opacity: 0;
     }
+    .links-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+@media (max-width: 480px) {
+  .links-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
     .link:hover {
       transform: scale(1.05);
@@ -177,26 +189,27 @@
   <source src="https://raw.githubusercontent.com/marcellnw/queennnzme/main/%5Bno_copyright_music%5D___coffee_time___cute_vlog_music(128k).mp3" type="audio/mpeg">
 </audio>
   
+<!-- Gantilah bagian dalam <div class="container">...</div> dengan ini -->
 <div class="container">
   <img class="profile-img" src="https://raw.githubusercontent.com/marcellnw/queennnzme/main/Queennnzme.png" alt="Queennnzme" />
   <h1>Queennnzme</h1>
-  
-    <p class="bio">Founder AltheraSMP | Content Creator | BA EternalSMP</p>
+  <p class="bio">Founder AltheraSMP | Content Creator | BA EternalSMP</p>
 
-      <a class="link" href="https://altherasmp.vercel.app/index.html" target="_blank">
+  <div class="links-grid">
+    <a class="link" href="https://altherasmp.vercel.app/index.html" target="_blank">
       <img src="https://img.icons8.com/ios-filled/50/000000/book.png"/> Join AltheraSMP
-      </a>
-      <a class="link" href="https://www.instagram.com/queennnzme?igsh=MTFkMHV3d3hucWllMg==" target="_blank">
-      <img src="https://img.icons8.com/ios-filled/50/000000/instagram.png"/>   Instagram
-      </a>
+    </a>
+    <a class="link" href="https://www.instagram.com/queennnzme?igsh=MTFkMHV3d3hucWllMg==" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/50/000000/instagram.png"/> Instagram
+    </a>
     <a class="link" href="https://www.tiktok.com/@queennnzme?_t=ZS-8yVbZ6lRbKD&_r=1" target="_blank">
-      <img src="https://img.icons8.com/ios-filled/50/000000/tiktok--v1.png"/>     TikTok
+      <img src="https://img.icons8.com/ios-filled/50/000000/tiktok--v1.png"/> TikTok
     </a>
     <a class="link" href="https://youtube.com/@queennnzme?si=XHrckI_ubekTkOT5" target="_blank">
-      <img src="https://img.icons8.com/ios-filled/50/000000/youtube-play.png"/>    YouTube
+      <img src="https://img.icons8.com/ios-filled/50/000000/youtube-play.png"/> YouTube
     </a>
     <a class="link" href="https://saweria.co/Queennnzme" target="_blank">
-      <img src="https://img.icons8.com/ios-filled/50/000000/money.png"/>     Saweria
+      <img src="https://img.icons8.com/ios-filled/50/000000/money.png"/> Saweria
     </a>
     <a class="link" href="https://discord.gg/u6cS9aZCs7" target="_blank">
       <img src="https://img.icons8.com/ios-filled/50/000000/discord-logo.png"/> QueennnzMe
@@ -210,11 +223,12 @@
     <a class="link" href="https://ngl.link/queennnzme" target="_blank">
       <img src="https://img.icons8.com/ios-filled/50/000000/paper-plane.png"/> NGL Ask Me
     </a>
-
-    <footer>
-      &copy; 2025 <strong>Queennnzme</strong> | All rights reserved.
-    </footer>
   </div>
+
+  <footer>
+    &copy; 2025 <strong>Queennnzme</strong> | All rights reserved.
+  </footer>
+</div>
   
 <script>
   // Agar musik bisa dimainkan setelah interaksi user
@@ -224,7 +238,6 @@
       bgm.play().catch(() => {}); // Tangani error diam-diam
     }
   }, { once: true }); // Hanya jalankan sekali
-</script>
 </script>
 </body>
 </html>
