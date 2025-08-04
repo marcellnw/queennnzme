@@ -83,6 +83,27 @@
       color: #333;
     }
 
+    .game-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .game-buttons img {
+      width: 48%;
+      max-width: 180px;
+      border-radius: 18px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .game-buttons img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(255, 105, 180, 0.4);
+    }
+
     .button-group {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -188,11 +209,21 @@
   <audio id="bgm" autoplay loop hidden>
     <source src="https://raw.githubusercontent.com/marcellnw/queennnzme/main/%5Bno_copyright_music%5D___coffee_time___cute_vlog_music(128k).mp3" type="audio/mpeg">
   </audio>
-  
+
   <div class="container">
     <img class="profile-img" src="https://raw.githubusercontent.com/marcellnw/queennnzme/main/Queennnzme.png" alt="Queennnzme" />
-    <h1>Queennnzme</h1>
+    <h1>@Queennnzme</h1>
     <p class="bio">Founder AltheraSMP | Content Creator | BA EternalSMP</p>
+
+    <!-- Game buttons -->
+    <div class="game-buttons">
+      <a href="https://www.minecraft.net" target="_blank">
+        <img src="https://cdn.mos.cms.futurecdn.net/ZH2WfGEAXXgi7wHK9aXyoi-1200-80.jpg" alt="Minecraft" />
+      </a>
+      <a href="https://m.mobilelegends.com" target="_blank">
+        <img src="https://cdn.oneesports.id/cdn-data/sites/2/2021/09/MobileLegends_ALLHEROES.jpg" alt="Mobile Legends" />
+      </a>
+    </div>
 
     <!-- 4 tombol awal dibagi 2 kolom -->
     <div class="button-group">
