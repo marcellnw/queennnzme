@@ -17,8 +17,15 @@
 
     html, body {
       height: 100%;
-      overflow-x: auto;
-      overflow-y: hidden;
+      overflow: hidden;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      padding: 20px;
+      overflow-y: auto;
     }
 
     #bg-video {
@@ -39,13 +46,6 @@
       height: 100%;
       background: rgba(255, 255, 255, 0.35);
       z-index: -1;
-    }
-
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
     }
 
     .container {
@@ -82,6 +82,13 @@
       color: #333;
     }
 
+    .button-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
     .link {
       display: flex;
       align-items: center;
@@ -90,7 +97,6 @@
       background: white;
       color: #ff69b4;
       border-radius: 25px;
-      margin: 10px 0;
       padding: 12px 16px;
       font-weight: 600;
       box-shadow: 0 4px 8px rgba(255, 105, 180, 0.2);
@@ -163,6 +169,10 @@
       .link {
         font-size: 14px;
       }
+
+      .button-group {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -173,30 +183,34 @@
   </video>
   <div class="overlay"></div>
 
-<audio id="bgm" autoplay loop hidden>
-  <source src="https://raw.githubusercontent.com/marcellnw/queennnzme/main/%5Bno_copyright_music%5D___coffee_time___cute_vlog_music(128k).mp3" type="audio/mpeg">
-</audio>
+  <audio id="bgm" autoplay loop hidden>
+    <source src="https://raw.githubusercontent.com/marcellnw/queennnzme/main/%5Bno_copyright_music%5D___coffee_time___cute_vlog_music(128k).mp3" type="audio/mpeg">
+  </audio>
   
-<div class="container">
-  <img class="profile-img" src="https://raw.githubusercontent.com/marcellnw/queennnzme/main/Queennnzme.png" alt="Queennnzme" />
-  <h1>Queennnzme</h1>
-  
+  <div class="container">
+    <img class="profile-img" src="https://raw.githubusercontent.com/marcellnw/queennnzme/main/Queennnzme.png" alt="Queennnzme" />
+    <h1>Queennnzme</h1>
     <p class="bio">Founder AltheraSMP | Content Creator | BA EternalSMP</p>
 
+    <!-- 4 tombol awal dibagi kiri-kanan -->
+    <div class="button-group">
       <a class="link" href="https://altherasmp.vercel.app/index.html" target="_blank">
-      <img src="https://img.icons8.com/ios-filled/50/000000/book.png"/> Join AltheraSMP
+        <img src="https://img.icons8.com/ios-filled/50/000000/book.png"/> Join AltheraSMP
       </a>
       <a class="link" href="https://www.instagram.com/queennnzme?igsh=MTFkMHV3d3hucWllMg==" target="_blank">
-      <img src="https://img.icons8.com/ios-filled/50/000000/instagram.png"/>   Instagram
+        <img src="https://img.icons8.com/ios-filled/50/000000/instagram.png"/> Instagram
       </a>
-    <a class="link" href="https://www.tiktok.com/@queennnzme?_t=ZS-8yVbZ6lRbKD&_r=1" target="_blank">
-      <img src="https://img.icons8.com/ios-filled/50/000000/tiktok--v1.png"/>     TikTok
-    </a>
-    <a class="link" href="https://youtube.com/@queennnzme?si=XHrckI_ubekTkOT5" target="_blank">
-      <img src="https://img.icons8.com/ios-filled/50/000000/youtube-play.png"/>    YouTube
-    </a>
+      <a class="link" href="https://www.tiktok.com/@queennnzme?_t=ZS-8yVbZ6lRbKD&_r=1" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/000000/tiktok--v1.png"/> TikTok
+      </a>
+      <a class="link" href="https://youtube.com/@queennnzme?si=XHrckI_ubekTkOT5" target="_blank">
+        <img src="https://img.icons8.com/ios-filled/50/000000/youtube-play.png"/> YouTube
+      </a>
+    </div>
+
+    <!-- Sisanya tetap satu baris -->
     <a class="link" href="https://saweria.co/Queennnzme" target="_blank">
-      <img src="https://img.icons8.com/ios-filled/50/000000/money.png"/>     Saweria
+      <img src="https://img.icons8.com/ios-filled/50/000000/money.png"/> Saweria
     </a>
     <a class="link" href="https://discord.gg/u6cS9aZCs7" target="_blank">
       <img src="https://img.icons8.com/ios-filled/50/000000/discord-logo.png"/> QueennnzMe
@@ -215,16 +229,14 @@
       &copy; 2025 <strong>Queennnzme</strong> | All rights reserved.
     </footer>
   </div>
-  
-<script>
-  // Agar musik bisa dimainkan setelah interaksi user
-  window.addEventListener("click", function () {
-    const bgm = document.getElementById("bgm");
-    if (bgm.paused) {
-      bgm.play().catch(() => {}); // Tangani error diam-diam
-    }
-  }, { once: true }); // Hanya jalankan sekali
-</script>
-</script>
+
+  <script>
+    window.addEventListener("click", function () {
+      const bgm = document.getElementById("bgm");
+      if (bgm.paused) {
+        bgm.play().catch(() => {});
+      }
+    }, { once: true });
+  </script>
 </body>
 </html>
