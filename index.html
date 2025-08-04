@@ -172,9 +172,11 @@
     <source src="https://raw.githubusercontent.com/marcellnw/queennnzme/main/Pin%20oleh%20Adore%20Silver%20di%20Commissions%20di%202025%20_%20Gambar%20gadis%20kartun%20Animasi%20Menggambar%20gadis.mp4" type="video/mp4">
   </video>
   <div class="overlay"></div>
-  <div class="story-page" id="storyPage">
-    <audio id="bgMusic" src="https://raw.githubusercontent.com/marcellnw/Astravell-dialog-rp/main/ethereal-ambient-269037.mp3" loop></audio>
 
+<audio id="bgm" autoplay loop hidden>
+  <source src="https://raw.githubusercontent.com/marcellnw/queennnzme/main/%5Bno_copyright_music%5D___coffee_time___cute_vlog_music(128k).mp3" type="audio/mpeg">
+  Browser Anda tidak mendukung audio.
+</audio>
   
   <div class="container">
     <img class="profile-img" src="https://github.com/marcellnw/queennnzme/blob/main/IMG_20250728112912459.jpg?raw=true" alt="Profile" />
@@ -210,24 +212,16 @@
       &copy; 2025 <strong>Queennnzme</strong> | All rights reserved.
     </footer>
   </div>
-
-<audio id="bgm" autoplay loop hidden>
-  <source src="https://raw.githubusercontent.com/marcellnw/queennnzme/main/%5Bno_copyright_music%5D___coffee_time___cute_vlog_music(128k).mp3" type="audio/mpeg">
-  Browser Anda tidak mendukung audio.
-</audio>
   
-    <script>
-    function openStory() {
-      document.getElementById("storyPage").classList.add("active");
-      document.getElementById("bgMusic").volume = 0.3;
-      document.getElementById("bgMusic").play();
+<script>
+  // Agar musik bisa dimainkan setelah interaksi user
+  window.addEventListener("click", function () {
+    const bgm = document.getElementById("bgm");
+    if (bgm.paused) {
+      bgm.play().catch(() => {}); // Tangani error diam-diam
     }
-    function closeStory() {
-      document.getElementById("storyPage").classList.remove("active");
-      document.getElementById("bgMusic").pause();
-      document.getElementById("bgMusic").currentTime = 0;
-    }
-  </script>
+  }, { once: true }); // Hanya jalankan sekali
+</script>
 </script>
 </body>
 </html>
