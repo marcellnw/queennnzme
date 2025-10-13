@@ -1,11 +1,12 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Queennnzme — Links</title>
+  <title>Queennnzme — Billing</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -20,10 +21,9 @@
     body {
       background-color: #fff;
       color: #000;
-    }
-    .dark-mode body {
-      background-color: #111;
-      color: #fdd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     #bg-video {
       position: fixed;
@@ -40,132 +40,64 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(255, 255, 255, 0.35);
+      background: rgba(255, 255, 255, 0.45);
       z-index: -1;
-      transition: background 0.3s ease;
-    }
-    .dark-mode .overlay {
-      background: rgba(0, 0, 0, 0.5);
     }
     .content-wrapper {
+      padding: 20px;
+      width: 100%;
       display: flex;
       justify-content: center;
-      padding: 20px;
+      align-items: center;
     }
     .container {
-      background: rgba(255, 255, 255, 0.4);
+      background: rgba(255, 255, 255, 0.9);
       backdrop-filter: blur(10px);
       border-radius: 30px;
-      padding: 30px 20px;
-      max-width: 400px;
+      padding: 40px 30px;
+      max-width: 450px;
       width: 100%;
       text-align: center;
-      box-shadow: 0 8px 16px rgba(255, 192, 203, 0.3);
+      box-shadow: 0 8px 30px rgba(255, 105, 180, 0.4);
       animation: fadeIn 1.2s ease-in-out;
-      margin-bottom: 30px;
-      position: relative;
-    }
-    .dark-mode .container {
-      background: rgba(0, 0, 0, 0.6);
-    }
-    .theme-toggle {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-size: 20px;
-    }
-    .profile-img {
-      width: 120px;
-      height: 120px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 3px solid white;
-      margin-bottom: 15px;
-      animation: sparkle 3s ease-in-out infinite;
+      border: 3px solid #ff69b4; /* Pink border to highlight the issue */
     }
     h1 {
-      font-size: 24px;
-      font-weight: 600;
-      color: #ff69b4;
+      font-size: 32px;
+      font-weight: 700;
+      color: #dc3545; /* Red for alert */
+      margin-bottom: 15px;
     }
-    .dark-mode h1 {
-      color: #ffaad4;
-    }
-    p.bio {
-      margin: 6px 0 20px;
-      font-size: 11px;
+    p {
+      font-size: 16px;
       color: #333;
+      margin-bottom: 25px;
+      line-height: 1.6;
     }
-    .dark-mode p.bio {
-      color: #ddd;
-    }
-    .grid-links {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-      margin-bottom: 20px;
-    }
-    .link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .call-to-action {
+      display: inline-block;
       text-decoration: none;
-      background: white;
-      color: #ff69b4;
+      background: #ff69b4;
+      color: white;
       border-radius: 25px;
-      padding: 12px 16px;
+      padding: 12px 30px;
       font-weight: 600;
-      box-shadow: 0 4px 8px rgba(255, 105, 180, 0.2);
+      box-shadow: 0 4px 10px rgba(255, 105, 180, 0.5);
       transition: transform 0.2s ease, background 0.3s ease;
-      animation: slideUp 0.6s ease forwards;
-      opacity: 0;
-      font-size: 14px;
-      margin-bottom: 12px;
+      font-size: 16px;
     }
-    .link:hover {
+    .call-to-action:hover {
       transform: scale(1.05);
-      background: #ffe6f0;
-    }
-    .dark-mode .link {
-      background: #222;
-      color: #ffaad4;
-    }
-    .dark-mode .link:hover {
-      background: #333;
-    }
-    .link img {
-      width: 20px;
-      margin-right: 10px;
+      background: #e55c9d;
     }
     footer {
-      margin-top: 20px;
+      margin-top: 30px;
       font-size: 12px;
-      color: #555;
-    }
-    .dark-mode footer {
-      color: #aaa;
+      color: #888;
     }
     @keyframes fadeIn {
       from {opacity: 0; transform: translateY(20px);}
       to {opacity: 1; transform: translateY(0);}
-    }
-    @keyframes slideUp {
-      to {opacity: 1; transform: translateY(0);}
-    }
-    @keyframes sparkle {
-      0%, 100% {box-shadow: 0 0 10px #ffb6c1;}
-      50% {box-shadow: 0 0 20px #ffc0cb;}
-    }
-    @media (max-width: 480px) {
-      .content-wrapper {
-        padding: 16px;
-      }
-      .container {
-        padding: 20px 16px;
-      }
     }
   </style>
 </head>
@@ -174,64 +106,23 @@
     <source src="https://raw.githubusercontent.com/marcellnw/queennnzme/main/Pin%20oleh%20Adore%20Silver%20di%20Commissions%20di%202025%20_%20Gambar%20gadis%20kartun%20Animasi%20Menggambar%20gadis.mp4" type="video/mp4">
   </video>
   <div class="overlay"></div>
-  <audio id="bgm" autoplay loop hidden>
-    <source src="https://raw.githubusercontent.com/marcellnw/queennnzme/main/%5Bno_copyright_music%5D___coffee_time___cute_vlog_music(128k).mp3" type="audio/mpeg">
-  </audio>
 
   <div class="content-wrapper">
     <div class="container">
-      <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-      <img class="profile-img" src="https://raw.githubusercontent.com/marcellnw/queennnzme/main/Queennnzme.png" alt="Queennnzme" />
-      <h1>Queennnzme</h1>
-      <p class="bio">Founder AltheraSMP | Content Creator | BA EternalSMP</p>
-      <div class="grid-links">
-        <a class="link" href="https://altherasmp.vercel.app/index.html" target="_blank">
-          <img src="https://img.icons8.com/ios-filled/50/000000/book.png"/> Join Server
-        </a>
-        <a class="link" href="https://www.instagram.com/queennnzme" target="_blank">
-          <img src="https://img.icons8.com/ios-filled/50/000000/instagram.png"/> Instagram
-        </a>
-        <a class="link" href="https://www.tiktok.com/@queennnzme" target="_blank">
-          <img src="https://img.icons8.com/ios-filled/50/000000/tiktok--v1.png"/> TikTok
-        </a>
-        <a class="link" href="https://youtube.com/@queennnzme" target="_blank">
-          <img src="https://img.icons8.com/ios-filled/50/000000/youtube-play.png"/> YouTube
-        </a>
-      </div>
-      <a class="link" href="https://discord.gg/u6cS9aZCs7" target="_blank">
-        <img src="https://img.icons8.com/ios-filled/50/000000/discord-logo.png"/> QueennnzMe
-      </a>
-      <a class="link" href="https://discord.gg/YCGvq8W3Bp" target="_blank">
-        <img src="https://img.icons8.com/ios-filled/50/000000/discord-logo.png"/> EternalSMP
-      </a>
-      <a class="link" href="https://discord.gg/u6cS9aZCs7" target="_blank">
-        <img src="https://img.icons8.com/ios-filled/50/000000/discord-logo.png"/> AltheraSMP
-      </a>
-      <a class="link" href="https://saweria.co/Queennnzme" target="_blank">
-        <img src="https://img.icons8.com/ios-filled/50/000000/money.png"/> Saweria
-      </a>
-      <a class="link" href="https://ngl.link/queennnzme" target="_blank">
-        <img src="https://img.icons8.com/ios-filled/50/000000/paper-plane.png"/> NGL Ask Me
+      <h1>Masa Percobaan Berakhir</h1>
+      <p>
+        Sangat disayangkan, **masa percobaan website Anda telah berakhir**. Untuk menjaga website **Queennnzme** tetap aktif dan dapat diakses, mohon segera lakukan pembayaran untuk perpanjangan durasi layanan.
+      </p>
+      <p>
+        Semua link dan fitur telah dinonaktifkan sementara. Lakukan perpanjangan sekarang agar website dapat berfungsi kembali.
+      </p>
+      <a class="call-to-action" href="#" target="_blank">
+        Lakukan Pembayaran Sekarang
       </a>
       <footer>
-        &copy; 2025 <strong>Queennnzme</strong> | All rights reserved.
+        &copy; 2025 <strong>Queennnzme</strong> | Harap segera perpanjang layanan.
       </footer>
     </div>
   </div>
-
-  <script>
-    window.addEventListener("click", function () {
-      const bgm = document.getElementById("bgm");
-      if (bgm.paused) {
-        bgm.play().catch(() => {});
-      }
-    }, { once: true });
-
-    function toggleTheme() {
-      document.documentElement.classList.toggle('dark-mode');
-      const btn = document.querySelector('.theme-toggle');
-      btn.textContent = document.documentElement.classList.contains('dark-mode') ? '☀️' : '🌙';
-    }
-  </script>
 </body>
 </html>
